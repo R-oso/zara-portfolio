@@ -1,0 +1,53 @@
+[
+    {
+      "title": "Tea party",
+      "description": "TeaParty is not just any band, it's a unique concept band composed of five enthusiastic girls. 'Having a cup of tea is like getting a cozy hug, going to a party is like being immersed in chaos. This is how we feel as TeaParty' The band's music expresses the duality of being a young adult, feeling lost in your 20s yet hearing the inner child's voice within. Their music is a chill, funky, jazzy vibe, infused with a touch of house/electro notes, and it is precisely what sets them apart. Our core concept is to embrace your inner child while balancing your adult side and reflecting on yourself as you grow. In this society, there is a pressure to have everything under control and a clear idea of your future by the time you turn 20. However, while pursuing these expectations, young adults often feel insecure and struggle to hear their inner child's voices. Societal norms dictate how we should behave, including studying hard, getting a job, and settling down in a relationship. While some find comfort in following these norms, they can be restrictive and limit young adults from pursuing their passions. The pressure to conform can be intense, leading to negative opinions and isolation. It is important to remember that societal norms are not set in stone and can be challenged and redefined. Young adults have the power to inspire others and create a more accepting and diverse society. Ultimately, the decision to conform or not is personal, and individuals should stay true to their values and beliefs. With courage and determination, young adults can break free and chart their own unique path in life. Our concept encourages embracing our inner child, being unafraid, and thinking differently.",
+      "images": [
+        "image1.jpg",
+        "image2.jpg",
+        "image3.jpg"
+      ],
+      "info": "Made with: Alexia, Rafaela, Zara, Emma, and Nina \n videography by Dztriantos \n music production by Luuk Roso"
+    },
+    {
+      "title": "Project 2",
+      "description": "This is project 2 description.",
+      "images": [
+        "image4.jpg",
+        "image5.jpg",
+        "image6.jpg"
+      ],
+      "info": "Additional description for project 2."
+    },
+    {
+      "title": "Project 3",
+      "description": "This is project 3 description.",
+      "images": [
+        "image7.jpg",
+        "image8.jpg",
+        "image9.jpg"
+      ],
+      "info": "Additional description for project 3."
+    },
+    {
+      "title": "Project 4",
+      "description": "This is project 4 description.",
+      "images": [
+        "image10.jpg",
+        "image11.jpg",
+        "image12.jpg"
+      ],
+      "info": "Additional description for project 4."
+    },
+    {
+      "title": "Project 5",
+      "description": "This is project 5 description.",
+      "images": [
+        "image13.jpg",
+        "image14.jpg",
+        "image15.jpg"
+      ],
+      "info": "Additional description for project 5."
+    }
+  ]
+  
