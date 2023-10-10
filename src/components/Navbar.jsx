@@ -1,6 +1,12 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import navbarCSS from "../css/navbar.module.css";
+
+const TestLink = React.forwardRef(({ to, children, onClick }, ref) => (
+  <Link className={navbarCSS.link} to={to} onClick={onClick} ref={ref}>
+    {children}
+  </Link>
+));
 
 const Navbar = ({ onLinkClick, matterContainerRef }) => {
   return (
@@ -16,14 +22,9 @@ const Navbar = ({ onLinkClick, matterContainerRef }) => {
         </Link>
       </li>
       <li>
-        <Link className={navbarCSS.link} to="/contact" onClick={() => onLinkClick()}>
-          Contact
-        </Link>
-      </li>
-      <li>
-        <Link className={navbarCSS.link} to="/testmatter" onClick={() => onLinkClick()}>
-          Test
-        </Link>
+        <TestLink to="/test" onClick={() => onLinkClick()} ref={matterContainerRef}>
+          Test voor luukje
+        </TestLink>
       </li>
     </ul>
   );
