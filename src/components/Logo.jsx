@@ -4,7 +4,7 @@ import Matter from "matter-js";
 import LogoCSS from "../css/logo.module.css";
 import "pathseg";
 
-const Logo = ({ matterContainerRef }) => {
+const Logo = ({ matterContainerRef, logoVisible }) => {
   useEffect(() => {
     // Module aliases
     let Engine = Matter.Engine,
@@ -22,8 +22,8 @@ const Logo = ({ matterContainerRef }) => {
     // Window dimensions, width declareances
     const windowWidth = matterContainerRef.current.clientWidth;
     const windowHeight = matterContainerRef.current.clientHeight;
-    const desiredWidth = 800;
-    const desiredHeight = 950;
+    const desiredWidth = 900;
+    const desiredHeight = 1050;
     let scaledImageWidth, scaledImageHeight;
 
     // Declare letterBody, array and sizes
@@ -33,6 +33,8 @@ const Logo = ({ matterContainerRef }) => {
     // Create an engine
     const engine = Engine.create();
     engine.gravity.y = -0.3;
+
+    console.log(document.getElementById("svg_path1"));
 
     // Create a renderer
     const render = Render.create({
@@ -54,11 +56,10 @@ const Logo = ({ matterContainerRef }) => {
 
     // Define an array of letters with their properties
     const letters = [
-      { text: "Z", sprite: "Z.svg", x: 230, y: 900, angle: 0, scaleX: 1, scaleY: 1 },
-      { text: "A", sprite: "A.svg", x: 230, y: 900, angle: 0, scaleX: 1, scaleY: 1 },
-      { text: "A", sprite: "A2.svg", x: 230, y: 900, angle: 0, scaleX: 1, scaleY: 1 },
-      { text: "R", sprite: "R.svg", x: 230, y: 900, angle: 0, scaleX: 1, scaleY: 1 },
-      { text: "<3", sprite: "<3.svg", x: 700, y: 1000, angle: 0, scaleX: 1, scaleY: 1 },
+      { text: "Z", sprite: "Z.svg", x: 230, y: 900, angle: 0 },
+      { text: "A", sprite: "A.svg", x: 230, y: 900, angle: 0 },
+      { text: "A", sprite: "A2.svg", x: 230, y: 900, angle: 0 },
+      { text: "R", sprite: "R.svg", x: 230, y: 900, angle: 0 },
     ];
 
     // Set the desired horizontal spacing between letters
@@ -187,20 +188,22 @@ const Logo = ({ matterContainerRef }) => {
       // Update the boundaries with the new window dimensions
       updateBoundaries(engine, newWindowWidth, newWindowHeight);
 
-      // // // Update the canvas size
+      // // Update the canvas size
       // render.canvas.width = newWindowWidth;
       // render.canvas.height = newWindowHeight;
 
-      // Update the scaling of letter bodies
-      for (const letter of letters) {
-        const { scaleX, scaleY } = letter;
-        for (const letterBody of letterBodies) {
-          if (letterBody.render.sprite.texture === letter.sprite) {
-            letterBody.render.sprite.xScale = scaleX;
-            letterBody.render.sprite.yScale = scaleY;
-          }
-        }
-      }
+      // console.log(render.canvas.width);
+
+      // // Update the scaling of letter bodies
+      // for (const letter of letters) {
+      //   const { scaleX, scaleY } = letter;
+      //   for (const letterBody of letterBodies) {
+      //     if (letterBody.render.sprite.texture === letter.sprite) {
+      //       letterBody.render.sprite.xScale = scaleX;
+      //       letterBody.render.sprite.yScale = scaleY;
+      //     }
+      //   }
+      // }
     };
 
     // Attach the event listener
@@ -236,7 +239,7 @@ const Logo = ({ matterContainerRef }) => {
         container.innerHTML = "";
       }
     };
-  }, []);
+  }, [logoVisible]);
 
   return <div ref={matterContainerRef} className={LogoCSS.container}></div>;
 };
