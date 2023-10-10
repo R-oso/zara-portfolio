@@ -1,7 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Goo = () => {
-  return <h1>My projects!!</h1>;
+const Projects = () => {
+  return (
+    <section>
+      <Link to="/">
+        <p>go back joe </p>
+      </Link>
+      <h1>My projects!!</h1>
+    </section>
+  );
 };
 
-export default Goo;
+export default Projects;

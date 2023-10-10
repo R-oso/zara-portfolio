@@ -1,8 +1,7 @@
 import React from "react";
-import Testmatter from "./Testmatter";
 
 const About = () => {
-  return <Testmatter />;
+  return;
 };
 
 export default About;
